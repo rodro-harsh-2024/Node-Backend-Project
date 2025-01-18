@@ -255,7 +255,7 @@ const updateAccountDetails = asyncHandler(async (req,res)=>{
   .json(200,user,"User details updated successfully");
 });
 
-const udpateUserAvatar = asyncHandler(async (req,res)=>{
+const updateUserAvatar = asyncHandler(async (req,res)=>{
   const avatarLocalPath = req.file?.path;
   if(!avatarLocalPath){
     throw new ApiError(400,"Avatar file is required");
@@ -435,7 +435,7 @@ export {registerUser,
   changeCurrentPassword,
   getCurrentUser,
   updateAccountDetails,
-  udpateUserAvatar,
+  updateUserAvatar,
   udpateUserCoverImage,
   getUserChannelProfile,
   getWatchHistory  
